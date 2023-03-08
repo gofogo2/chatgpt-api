@@ -8,7 +8,7 @@ export default function Home() {
   const [result, setResult] = useState();
   const [isLoading, setIsLoading] = useState();
   useEffect(() => {
-    window.speechSynthesis.getVoices();
+   const s = window.speechSynthesis.getVoices();
   }, []);
   async function onSubmit(event) {
     
@@ -35,7 +35,6 @@ export default function Home() {
       setAnimalInput("");
       setIsLoading(false);
     } catch(error) {
-      // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
     }
@@ -48,7 +47,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h3>chatgpt 테스트</h3>
+        <h3>chatgpt  테스트</h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -61,7 +60,7 @@ export default function Home() {
         </form>
 
         <div className={styles.result}>{result}</div>
-      {isLoading?<div style={{color:'red',fontSize:'30px', position:'fixed',top:0,bottom:0,left:0,right:0,backgroundColor:'black',opacity:'0.5',display:'flex',justifyContent:'center',alignItems:'center' }} >Loading...........</div>:""}
+      {isLoading?<div style={{color:'red',fontSize:'30px', position:'fixed',top:0,bottom:0,left:0,right:0,backgroundColor:'black',opacity:'0.5',display:'flex',justifyContent:'center',alignItems:'center' }} >잠깐만 고민중이야..</div>:""}
       </main>
     </div>
   );

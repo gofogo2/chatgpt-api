@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/api/getSpeach.js"  ],
   "exclude": [
     "node_modules"
   ]
